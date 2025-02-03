@@ -1,9 +1,8 @@
-import { useState } from "react";
-import Home from "./Pages/Home";
+import SideBar from "./Components/Organism/SideBar";
+import './styles/index.css'
 function App() {
   return (
-    <Home />
+    <SideBar />
   );
 }
-
 export default App;
