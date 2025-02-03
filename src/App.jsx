@@ -1,8 +1,11 @@
 import SideBar from "./Components/Organism/SideBar";
-import './styles/index.css'
+import NavProvider from "./Components/NavContext";
+import "./styles/index.css";
 function App() {
   return (
-    <SideBar />
+    <NavProvider>
+      <SideBar />
+    </NavProvider>
   );
 }
 export default App;
