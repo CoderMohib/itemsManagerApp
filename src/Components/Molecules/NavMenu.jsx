@@ -1,11 +1,11 @@
 import NavItem from "../Atoms/NavItem";
 export default function NavMenu({ onSelect }){
     return (
-    <nav className="nav-menu">
-        <NavItem icon="🏠" text="Home" onClick={onSelect} />
-        <NavItem icon="📦" text="Products" onClick={onSelect} />
-        <NavItem icon="➕" text="Add Product" onClick={onSelect} />
-        <NavItem icon="📁" text="Categories" onClick={onSelect} />
-        <NavItem icon="➕" text="Add Category" onClick={onSelect} />
-    </nav>);
+    <ul className="nav-menu">
+        <NavItem icon="🏠" text="Home" to="/" />
+        <NavItem icon="📦" text="Products" to="/products" />
+        <NavItem icon="➕" text="Add Product" to="/addproduct" />
+        <NavItem icon="📁" text="Categories" to="/category" />
+        <NavItem icon="➕" text="Add Category" to="/addcategory" />
+    </ul>);
 }
