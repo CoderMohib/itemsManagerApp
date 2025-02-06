@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow-x: hidden;
   display: flex;
   height: 100vh;
   background-color:#fff;
@@ -13,6 +14,7 @@ body {
 
 #root {
   display: flex;
+  flex-direction: row;
 }
 
 .sidebar {
@@ -93,21 +95,22 @@ body {
   border-bottom: 2px solid #fff; 
 }
 .side-Content{
-  width: calc(100% - 18rem);
+  width: calc(100vw - 18rem);
   position: relative;
   left: 18rem;
   display: flex;
   flex-direction: column;
-  z-index: -1;
 }
 .category{
   margin: 0.6rem;
   padding: 0.6rem;
-  width: 80%;
+  max-width: 40%;
+  width: 40%;
   border-radius: 6rem;
   color: whitesmoke;
   background: #003D5B;
   font-size: 1.2rem;
+  
 }
 .category .categoryName{
   padding: 0.3rem;
@@ -117,14 +120,16 @@ body {
   font-weight: bold;
 }
 .carousals{
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .image-carousal{
   margin: 0.7rem;
-  width: 20rem;
-  max-height: 25rem;
+  width: 17rem;
+  height: 30rem;
+  max-height: 30rem;
   background-color: aliceblue;
   border-radius: 1rem;
   border: 1px solid #30638E;
@@ -158,3 +163,19 @@ body {
   font-weight: bold;
 }
 
+.left-btn{
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #30638E;
+  text-shadow: 2px 2px 3px #fff;
+  cursor:pointer !important;
+}
+.right-btn{
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #30638E;
+  text-shadow: 2px 2px 3px #fff;
+  cursor:pointer !important;
+}

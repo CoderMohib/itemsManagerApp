@@ -27,6 +27,110 @@ export const products = [
     },
     {
       id: 2,
+      name: "Wireless adphones",
+      categoryId: 1,
+      price: 59.99,
+      stock: 120,
+      description: "High-quality wireless headphones with noise-cancellation and long battery life.",
+      brand: "TechAudio",
+      rating: 4.5,
+      images: [
+        "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800", // Example headphone image
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+      ],
+      reviews: [
+        {
+          user: "John Doe",
+          rating: 5,
+          comment: "Excellent sound quality and comfortable to wear!"
+        },
+        {
+          user: "Jane Smith",
+          rating: 4,
+          comment: "Good headphones but slightly overpriced."
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "Wireless Headphones",
+      categoryId: 1,
+      price: 59.99,
+      stock: 120,
+      description: "High-quality wireless headphones with noise-cancellation and long battery life.",
+      brand: "TechAudio",
+      rating: 4.5,
+      images: [
+        "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800", // Example headphone image
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+      ],
+      reviews: [
+        {
+          user: "John Doe",
+          rating: 5,
+          comment: "Excellent sound quality and comfortable to wear!"
+        },
+        {
+          user: "Jane Smith",
+          rating: 4,
+          comment: "Good headphones but slightly overpriced."
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: "Wireless Bluetooth",
+      categoryId: 1,
+      price: 59.99,
+      stock: 120,
+      description: "High-quality wireless headphones with noise-cancellation and long battery life.",
+      brand: "TechAudio",
+      rating: 4.5,
+      images: [
+        "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800", // Example headphone image
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+      ],
+      reviews: [
+        {
+          user: "John Doe",
+          rating: 5,
+          comment: "Excellent sound quality and comfortable to wear!"
+        },
+        {
+          user: "Jane Smith",
+          rating: 4,
+          comment: "Good headphones but slightly overpriced."
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: "Bluetooth Headphones",
+      categoryId: 1,
+      price: 59.99,
+      stock: 120,
+      description: "High-quality wireless headphones with noise-cancellation and long battery life.",
+      brand: "TechAudio",
+      rating: 4.5,
+      images: [
+        "https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800", // Example headphone image
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+      ],
+      reviews: [
+        {
+          user: "John Doe",
+          rating: 5,
+          comment: "Excellent sound quality and comfortable to wear!"
+        },
+        {
+          user: "Jane Smith",
+          rating: 4,
+          comment: "Good headphones but slightly overpriced."
+        }
+      ]
+    },
+    {
+      id: 2,
       name: "Smartphone with AMOLED Display",
       categoryId : 2,
       price: 699.99,

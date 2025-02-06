@@ -1,29 +1,98 @@
 import { products } from "../../data/product";
 
 export default function ProductCarousel({ category }) {
-  const categoryProducts = products.filter(
-    (product) => product.categoryId === category.id
-  );
+
   return (
-    <div class="side-Content">
-        <div class="category">
-            <p class="categoryName"><span>Category:</span>  {category.name}</p>
+    <div className="side-Content">
+      <div className="category">
+        <p className="categoryName">
+          <span>Category:</span> Electronics
+        </p>
+      </div>
+        
+      <div className="carousals">
+        <button className="left-btn"><i class="ri-arrow-drop-left-line"></i></button>
+        <div className="image-carousal">
+          <div className="img">
+            <img
+              src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+              alt="Electronics"
+            />
+          </div>
+          <div className="image-content">
+            <p>
+              <h3>Wireless Bluetooth Headphones</h3>
+            </p>
+            <p>
+              <span>Price:</span> 59.9$
+            </p>
+            <p>
+              <span>Description:</span> High-quality wireless headphones with
+              noise-cancellation and long battery life.
+            </p>
+            <p>
+              <span>Stocks:</span> 30
+            </p>
+            <p>
+              <span>Rating:</span> 4.5⭐⭐⭐⭐⭐
+            </p>
+          </div>
         </div>
-        <div class="carousals">
-            <div class="image-carousal">
-                <div class="img">
-                    <img src={categoryProducts[0].images[0]} alt="Electronics" />
-                </div>
-                <div class="image-content">
-                    <p><h3>{categoryProducts[0].name}</h3></p>
-                    <p><span>Price:</span> {categoryProducts[0].price}$</p>
-                    <p><span>Description:</span> {categoryProducts[0].description}</p>
-                    <p><span>Stocks:</span> {categoryProducts[0].stock}</p>
-                    <p><span>Rating:</span> {categoryProducts[0].rating}</p>
-                </div>
-            </div>
-            
+        <div className="image-carousal">
+          <div className="img">
+            <img
+              src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+              alt="Electronics"
+            />
+          </div>
+          <div className="image-content">
+            <p>
+              <h3>Wireless Bluetooth Headphones</h3>
+            </p>
+            <p>
+              <span>Price:</span> 59.9$
+            </p>
+            <p>
+              <span>Description:</span> High-quality wireless headphones with
+              noise-cancellation and long battery life.
+            </p>
+            <p>
+              <span>Stocks:</span> 30
+            </p>
+            <p>
+              <span>Rating:</span> 4.5⭐⭐⭐⭐⭐
+            </p>
+          </div>
         </div>
+        <div className="image-carousal">
+          <div className="img">
+            <img
+              src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+              alt="Electronics"
+            />
+          </div>
+          <div className="image-content">
+            <p>
+              <h3>Wireless Bluetooth Headphones</h3>
+            </p>
+            <p>
+              <span>Price:</span> 59.9$
+            </p>
+            <p>
+              <span>Description:</span> High-quality wireless headphones with
+              noise-cancellation and long battery life.
+            </p>
+            <p>
+              <span>Stocks:</span> 30
+            </p>
+            <p>
+              <span>Rating:</span> 4.5⭐⭐⭐⭐⭐
+            </p>
+          </div>
+        </div>
+
+        <button className="right-btn"><i class="ri-arrow-drop-right-line"></i></button>
+      </div>
     </div>
   );
 }

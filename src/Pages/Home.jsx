@@ -1,3 +1,12 @@
-export default function Home(){
-    return <p> Hi i am Home</p>
+export default function Home() {
+  return (
+    <div className="side-Content">
+      <button className="home-btn">hi</button>
+      <button className="home-btn">hi</button>
+      <button className="home-btn">hi</button>
+      <button className="home-btn">hi</button>
+      <button className="home-btn">hi</button>
+      <button className="home-btn">hi</button>
+    </div>
+  );
 }
