@@ -1,7 +1,7 @@
 import { products } from "../../data/product";
 
 export default function ProductCarousel({ category }) {
-
+  
   return (
     <div className="side-Content">
       <div className="category">
