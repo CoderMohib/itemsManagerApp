@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Product from "./Pages/Product";
 import Category from "./Pages/Category";
 import "./styles/index.css";
+import "./styles/mediaQuery.css"
 import { Fragment } from "react";
 
 function App() {

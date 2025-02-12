@@ -1,7 +1,8 @@
-import { categories } from "../data/category.jsx";
-import ProductCarousel from "../Components/Organism/ProductCarousel";
+import Carousel from "../Components/Organism/ProductCarousel";
 export default function Poroduct() {
   return (
-      <ProductCarousel category={categories[0]}/>
+    <div className="side-Content">
+      <Carousel />
+    </div>
   );
 }

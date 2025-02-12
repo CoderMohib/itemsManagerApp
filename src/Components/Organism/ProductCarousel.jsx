@@ -1,98 +1,122 @@
-import { products } from "../../data/product";
-
-export default function ProductCarousel({ category }) {
-  
+import { Fragment, useState } from "react";
+import logo from "../../assets/logo.jpg";
+export default function Carousel() {
   return (
-    <div className="side-Content">
-      <div className="category">
-        <p className="categoryName">
-          <span>Category:</span> Electronics
-        </p>
+    <Fragment>
+      <div>
+        <p className="category">Electronis</p>
+        <div className="carousal-container">
+          <div className="carousal-Product">
+            <div className="product-img">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="product-details">
+              <div className="product-header">
+                <h3>Electronics Product</h3>
+              </div>
+              <div className="product-main">
+                <p>
+                  <strong>Price:</strong> 1500$
+                </p>
+                <p>
+                  <strong>Description:</strong> High-quality wireless headphones
+                  with noise-cancellation and long battery life.
+                </p>
+                <p>
+                  <strong>Stock:</strong> 15
+                </p>
+                <p>
+                  <strong>Rating:</strong> 4.5
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="carousal-Product">
+            <div className="product-img">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="product-details">
+              <h3>Electronics Type Product</h3>
+              <p>
+                <strong>Price:</strong> 1500$
+              </p>
+              <p>
+                <strong>Description:</strong> High-quality wireless headphones
+                with noise-cancellation and long battery life.
+              </p>
+              <p>
+                <strong>Stock:</strong> 15
+              </p>
+              <p>
+                <strong>Rating:</strong> 4.5
+              </p>
+            </div>
+          </div>
+          <div className="carousal-Product">
+            <div className="product-img">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="product-details">
+              <h3>Electronics Type Product</h3>
+              <p>
+                <strong>Price:</strong> 1500$
+              </p>
+              <p>
+                <strong>Description:</strong> High-quality wireless headphones
+                with noise-cancellation and long battery life.
+              </p>
+              <p>
+                <strong>Stock:</strong> 15
+              </p>
+              <p>
+                <strong>Rating:</strong> 4.5
+              </p>
+            </div>
+          </div>
+          <div className="carousal-Product">
+            <div className="product-img">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="product-details">
+              <h3>Electronics Type Product</h3>
+              <p>
+                <strong>Price:</strong> 1500$
+              </p>
+              <p>
+                <strong>Description:</strong> High-quality wireless headphones
+                with noise-cancellation and long battery life.
+              </p>
+              <p>
+                <strong>Stock:</strong> 15
+              </p>
+              <p>
+                <strong>Rating:</strong> 4.5
+              </p>
+            </div>
+          </div>
+          <div className="carousal-Product">
+            <div className="product-img">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="product-details">
+              <h3>Electronics Type Product</h3>
+              <p>
+                <strong>Price:</strong> 1500$
+              </p>
+              <p>
+                <strong>Description:</strong> High-quality wireless headphones
+                with noise-cancellation and long battery life.
+              </p>
+              <p>
+                <strong>Stock:</strong> 15
+              </p>
+              <p>
+                <strong>Rating:</strong> 4.5
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-        
-      <div className="carousals">
-        <button className="left-btn"><i class="ri-arrow-drop-left-line"></i></button>
-        <div className="image-carousal">
-          <div className="img">
-            <img
-              src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-              alt="Electronics"
-            />
-          </div>
-          <div className="image-content">
-            <p>
-              <h3>Wireless Bluetooth Headphones</h3>
-            </p>
-            <p>
-              <span>Price:</span> 59.9$
-            </p>
-            <p>
-              <span>Description:</span> High-quality wireless headphones with
-              noise-cancellation and long battery life.
-            </p>
-            <p>
-              <span>Stocks:</span> 30
-            </p>
-            <p>
-              <span>Rating:</span> 4.5⭐⭐⭐⭐⭐
-            </p>
-          </div>
-        </div>
-        <div className="image-carousal">
-          <div className="img">
-            <img
-              src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-              alt="Electronics"
-            />
-          </div>
-          <div className="image-content">
-            <p>
-              <h3>Wireless Bluetooth Headphones</h3>
-            </p>
-            <p>
-              <span>Price:</span> 59.9$
-            </p>
-            <p>
-              <span>Description:</span> High-quality wireless headphones with
-              noise-cancellation and long battery life.
-            </p>
-            <p>
-              <span>Stocks:</span> 30
-            </p>
-            <p>
-              <span>Rating:</span> 4.5⭐⭐⭐⭐⭐
-            </p>
-          </div>
-        </div>
-        <div className="image-carousal">
-          <div className="img">
-            <img
-              src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-              alt="Electronics"
-            />
-          </div>
-          <div className="image-content">
-            <p>
-              <h3>Wireless Bluetooth Headphones</h3>
-            </p>
-            <p>
-              <span>Price:</span> 59.9$
-            </p>
-            <p>
-              <span>Description:</span> High-quality wireless headphones with
-              noise-cancellation and long battery life.
-            </p>
-            <p>
-              <span>Stocks:</span> 30
-            </p>
-            <p>
-              <span>Rating:</span> 4.5⭐⭐⭐⭐⭐
-            </p>
-          </div>
-        </div>
-
-        <button className="right-btn"><i class="ri-arrow-drop-right-line"></i></button>
-      </div>
-    </div>
+    </Fragment>
   );
 }
