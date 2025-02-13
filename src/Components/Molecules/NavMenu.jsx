@@ -8,7 +8,7 @@ export default function NavMenu({ isOpen, setIsOpen }) {
           setIsOpen(false);
         }}
       >
-        <i class="ri-close-line"></i>
+        <i className="ri-close-line"></i>
       </button>
       <NavItem icon="🏠" text="Home" to="/" />
       <NavItem icon="📦" text="Products" to="/products" />

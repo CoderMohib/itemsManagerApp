@@ -9,7 +9,7 @@ export default function SideBar() {
     <div>
 
       <div className={`sidebar`}>
-       <button className="toggle-btn" onClick={()=>{setIsOpen(true)}}><i class="ri-menu-line"></i></button>
+       <button className="toggle-btn" onClick={()=>{setIsOpen(true)}}><i className="ri-menu-line"></i></button>
         <SiderBarHeader />
         <NavMenu isOpen={isOpen} setIsOpen={setIsOpen}/>
         <SiderBarFooter />
