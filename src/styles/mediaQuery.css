@@ -1,8 +1,5 @@
 @media (max-width: 800px) {
-    .side-Content{
-      width: 100%;
-      left: 0;
-    }
+
     .disable{
       display: none;
     }
@@ -41,8 +38,16 @@
       margin: 7px;
     }
     .side-Content{
+        left: 0;
         width: 100vw;
+        height: fit-content;
         position: relative;
         top: 5rem;
+        display: block;
+    }
+  }
+  @media (max-width: 500px){
+    .form-row{
+        flex-direction: column;
     }
   }

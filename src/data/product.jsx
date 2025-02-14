@@ -130,7 +130,7 @@ export const products = [
       ]
     },
     {
-      id: 2,
+      id: 6,
       name: "Smartphone with AMOLED Display",
       categoryId : 2,
       price: 699.99,
@@ -151,7 +151,7 @@ export const products = [
       ]
     },
     {
-      id: 3,
+      id: 7,
       name: "Running Shoes",
       categoryId: 3,
       price: 89.99,
