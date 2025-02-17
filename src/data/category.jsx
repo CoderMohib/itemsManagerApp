@@ -11,5 +11,6 @@ export const categories = [
       "id": 3,
       "name": "Sportswear"
     }
+
   ]
   

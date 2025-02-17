@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { categories } from "../../data/category";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function AddProductForm({ addProduct }) {
   const [product, setProduct] = useState({
     name: "",
@@ -19,9 +21,26 @@ export default function AddProductForm({ addProduct }) {
       [e.target.name]: e.target.value,
     }));
   }
-  function handleImageUpload(e) {
-    
-  }
+  const handleImageUpload = (e) => {
+    const files = Array.from(e.target.files); // Convert FileList to Array
+    const promises = files.map((file) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = () => resolve(reader.result); // Store Base64 string
+        reader.onerror = reject;
+      });
+    });
+
+    Promise.all(promises)
+      .then((productImages) => {
+        setProduct((prevProduct) => ({
+          ...prevProduct,
+          images: [...prevProduct.images, ...productImages], // Append images
+        }));
+      })
+      .catch((error) => console.error("Error converting files:", error));
+  };
   function isValid() {
     return (
       product.name.trim() &&
@@ -29,15 +48,28 @@ export default function AddProductForm({ addProduct }) {
       Number(product.price) >= 1 &&
       product.stock >= 0 &&
       product.brand.trim() &&
-      product.description.trim()
+      product.description.trim() &&
+      product.images.length != 0
     );
   }
   function handleOnSubmit(e) {
     e.preventDefault();
     if (isValid()) {
       addProduct(product);
+
       setIsSubmit(true);
-      setTimeout(() => setIsSubmit(false), 500);
+      setTimeout(() => {
+        setIsSubmit(false);
+        toast.success("Product added successfully!", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      }, 500);
       setProduct({
         name: "",
         categoryId: "",
@@ -53,7 +85,6 @@ export default function AddProductForm({ addProduct }) {
   }
   return (
     <div className="side-Content">
-      <h3 className="add-heading">Add New Product</h3>
       <div className="form-container">
         <form className="styled-form" onSubmit={handleOnSubmit}>
           <div className="form-row">
@@ -133,15 +164,26 @@ export default function AddProductForm({ addProduct }) {
                 accept="image/*"
                 multiple
                 onChange={handleImageUpload}
-                style={{display:"none"}}
+                style={{ display: "none" }}
               />
-              <label htmlFor="images" className="file-label"><i className="ri-file-upload-fill upload-icon"></i>Choose Images</label>
+              <label htmlFor="images" className="file-label">
+                <i className="ri-file-upload-fill upload-icon"></i>Choose Images
+              </label>
             </div>
           </div>
-          {product.images.length > 0 && (
+          {product.images.length < 1 ? (
+            <div className="no-image-preview">
+              <p className="no-image-text">No Images Uploaded Yet!</p>
+            </div>
+          ) : (
             <div className="image-preview">
               {product.images.map((image, index) => (
-                <img key={index} src={image} alt={`Product ${index}`} className="preview-image" />
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Product ${index}`}
+                  className="preview-image"
+                />
               ))}
             </div>
           )}

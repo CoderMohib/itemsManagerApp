@@ -45,6 +45,13 @@
         top: 5rem;
         display: block;
     }
+    .side{
+        left: 0;
+        height: calc(100vh - 5rem);
+        width: 100vw;
+        position: relative;
+        top: 5rem;
+    }
   }
   @media (max-width: 500px){
     .form-row{
