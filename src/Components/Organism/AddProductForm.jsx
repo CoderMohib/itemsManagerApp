@@ -22,12 +22,12 @@ export default function AddProductForm({ addProduct }) {
     }));
   }
   const handleImageUpload = (e) => {
-    const files = Array.from(e.target.files); // Convert FileList to Array
+    const files = Array.from(e.target.files); 
     const promises = files.map((file) => {
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onloadend = () => resolve(reader.result); // Store Base64 string
+        reader.onloadend = () => resolve(reader.result);
         reader.onerror = reject;
       });
     });
@@ -36,7 +36,7 @@ export default function AddProductForm({ addProduct }) {
       .then((productImages) => {
         setProduct((prevProduct) => ({
           ...prevProduct,
-          images: [...prevProduct.images, ...productImages], // Append images
+          images: [...prevProduct.images, ...productImages], 
         }));
       })
       .catch((error) => console.error("Error converting files:", error));
