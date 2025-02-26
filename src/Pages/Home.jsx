@@ -1,6 +1,7 @@
-function Home(){
-    return (
-        <p>HI KESI HO</p>
-    )
+export default function Home() {
+  return (
+    <div className="side-Content">
+      <h1>Welcome to Home!</h1>
+    </div>
+  );
 }
-export default Home;
