@@ -159,13 +159,12 @@ body {
 .carousal-container{
   margin: 10px;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow: scroll;
 }
 .carousal-Product{
-  height: 25rem;
-  flex: 0 0 auto; /* Ensures items stay in one line */
-  width: 200px; /* Fixed width for each product */
+  flex: 1 1 300px; 
+  max-width: 300px; 
   border-radius: 10px;
   background: #f8f8f8;
   padding: 10px;
@@ -195,4 +194,8 @@ body {
 }
 .product-header{
   height: fit-content;
+}
+.product-content{
+  margin-left: 17rem;
+  padding: 10px;
 }

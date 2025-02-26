@@ -128,6 +128,11 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #003d5b;
   opacity: 1 !important;
 }
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
 .image-preview {
   display: flex;
   gap: 10px;
@@ -163,4 +168,22 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .preview-image:hover {
   transform: scale(1.1);
+}
+.remove-image-btn {
+  position: absolute;
+  background:transparent;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  opacity: 0.8;
+  
+}
+.red-border{
+  border: 1.5px solid red !important;
 }

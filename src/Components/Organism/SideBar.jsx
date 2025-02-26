@@ -1,7 +1,7 @@
 import SiderBarFooter from "../Molecules/SideBarFooter";
 import SiderBarHeader from "../Molecules/SidebarHeader";
 import NavMenu from "../Molecules/NavMenu";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function SideBar() {
   const [isOpen,setIsOpen] = useState(false);
